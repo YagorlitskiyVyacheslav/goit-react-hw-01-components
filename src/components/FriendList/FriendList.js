@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "./friendList.component"
+import PropTypes from "prop-types";
 
 const FriendList = ({friends}) => {
     return (
@@ -7,7 +8,6 @@ const FriendList = ({friends}) => {
         <h2>Task 3</h2>
         <Container>
           {friends.map((friend) => {
-            console.log(friend.isOnline);
             return (
               <Container.Li key={friend.id}>
                 <Container.IsActive
@@ -22,5 +22,9 @@ const FriendList = ({friends}) => {
       </>
     );
 }
+
+FriendList.propTypes = {
+  friends: PropTypes.array.isRequired
+};
 
 export default FriendList;

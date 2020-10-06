@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-const randomColor = () => {
-    return (
-      "#" +
-      (Math.random().toString(16) + "000000").substring(2, 8).toUpperCase()
-    );
-};
-
-
 const Container = styled.section`
   width: fit-content;
   text-align: center;

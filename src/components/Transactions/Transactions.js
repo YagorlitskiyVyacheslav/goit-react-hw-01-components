@@ -1,5 +1,6 @@
 import React from "react";
-import Table from "./transactions.component"
+import Table from "./transactions.component";
+import PropTypes from "prop-types";
 
 
 const Transactions = ({items}) => {
@@ -37,6 +38,10 @@ const Transactions = ({items}) => {
         </Table>
       </>
     );
+}
+
+Transactions.propTypes = {
+  items: PropTypes.array.isRequired
 }
 
 export default Transactions;

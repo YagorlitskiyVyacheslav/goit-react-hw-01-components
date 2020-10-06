@@ -1,7 +1,8 @@
 import React from 'react';
-import Container from './statistics.component'
+import Container from './statistics.component';
+import PropTypes from "prop-types";
 
-const Statistics = ({title, stats, color}) => {
+const Statistics = ({title, stats}) => {
   const randomColor = () => {
     return (
       "#" +
@@ -30,4 +31,8 @@ const Statistics = ({title, stats, color}) => {
     );
 }
 
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array.isRequired
+};
 export default Statistics;

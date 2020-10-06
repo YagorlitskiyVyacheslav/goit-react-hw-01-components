@@ -1,5 +1,6 @@
 import React from "react";
 import Container from './profile.component';
+import PropTypes from "prop-types";
 
 const Profile = ({name, tag, location, avatar, stats}) => {
     return (
@@ -30,5 +31,13 @@ const Profile = ({name, tag, location, avatar, stats}) => {
       </>
     );
 };
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
+  stats: PropTypes.object.isRequired
+}
 
 export default Profile;
